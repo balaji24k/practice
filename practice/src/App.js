@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState } from 'react';
 import Form from './components/Users/Form';
 import UserList from './components/Users/UserList';
 
@@ -7,10 +7,10 @@ function App() {
 
   const [usersList,setUsersList] = useState([]);
 
-  const addUserHandler = (uname,uAge) => {
+  const addUserHandler = (uname,uAge,uCollege) => {
     setUsersList((prevUsersList)=> {
       return [...prevUsersList, 
-        {name : uname, age:uAge, id:Math.random().toString()}
+        {name : uname, age:uAge, college: uCollege, id:Math.random().toString()}
       ]
     })
   }
